@@ -2,7 +2,6 @@ import csv
 import os
 from secrets import token_urlsafe
 from django.conf import settings
-
 from django.http import Http404
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import  login_required
@@ -10,7 +9,6 @@ from .models import Evento, Certificado
 from django.urls import reverse
 from django.contrib import messages
 from django.contrib.messages import constants
-
 from io import BytesIO
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from PIL import Image, ImageDraw, ImageFont
