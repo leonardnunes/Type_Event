@@ -85,8 +85,8 @@ def participantes_evento(request, id):
      if not evento.criador == request.user:
          raise Http404('Esse evento não é seu')
      if request.method == "GET":
-        participantes = evento.participantes.all()[::5]
-        return render(request, 'participantes_evento.html', {'evento': evento, 'participantes': participantes, 'evento': evento})
+        participantes = evento.participantes.all()[::3]
+        return render(request, 'participantes_evento.html', {'evento': evento, 'participantes': participantes})
 
 @login_required
 def gerar_csv(request, id):
